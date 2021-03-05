@@ -7,7 +7,6 @@ import com.lzz.middleware.service.StudentService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
 /**
  * 学生服务实现类
@@ -27,7 +26,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public StudentDO update(@RequestBody StudentDTO studentDTO) {
+    public StudentDO update(StudentDTO studentDTO) {
         StudentDO student = new StudentDO();
         BeanUtils.copyProperties(studentDTO, student);
 

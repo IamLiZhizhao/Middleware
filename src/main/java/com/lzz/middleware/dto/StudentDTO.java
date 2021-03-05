@@ -1,5 +1,7 @@
 package com.lzz.middleware.dto;
 
+import com.lzz.middleware.entity.StudentDO;
+
 import java.math.BigDecimal;
 
 public class StudentDTO {
@@ -12,11 +14,21 @@ public class StudentDTO {
     private String sex;
     private BigDecimal score;
 
+    public StudentDTO() {
+    }
+
     public StudentDTO(String sno, String name, String sex, BigDecimal score) {
         this.sno = sno;
         this.name = name;
         this.sex = sex;
         this.score = score;
+    }
+
+    public StudentDTO(StudentDO studentDO) {
+        this.sno = studentDO.getSno();
+        this.name = studentDO.getName();
+        this.sex = studentDO.getSex();
+        this.score = studentDO.getScore();
     }
 
     public String getSno() {

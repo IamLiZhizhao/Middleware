@@ -4,6 +4,7 @@ import com.lzz.middleware.dto.StudentDTO;
 import com.lzz.middleware.entity.StudentDO;
 import com.lzz.middleware.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,7 +26,7 @@ public class StudentController {
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
-    public StudentDO update(StudentDTO student) {
+    public StudentDO update(@RequestBody StudentDTO student) {
         return studentService.update(student);
     }
 
