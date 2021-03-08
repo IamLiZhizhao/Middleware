@@ -84,6 +84,7 @@ spring:
 #    host: localhost
 #    # Redis服务器连接端口
 #    port: 6379
+#    password:
 #    # 连接超时时间（毫秒）
 #    timeout: 0
 #    jedis:
@@ -96,7 +97,6 @@ spring:
 #        max-idle: 8
 #        # 连接池中的最小空闲连接
 #        min-idle: 0
-
 
 #    Ehcache配置
   cache:
