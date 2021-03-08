@@ -1,8 +1,9 @@
 package com.lzz.middleware.entity;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class StudentDO {
+public class StudentDO implements Serializable {
 
     private String sno; // 学号
     /**

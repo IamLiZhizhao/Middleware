@@ -18,7 +18,7 @@ public interface StudentService {
     StudentDO update(StudentDTO student);
 
     @CacheEvict(key = "#p0", allEntries = true)
-    void deleteBysno(String sno);
+    void deleteBySno(String sno);
 
     @Cacheable(key = "#p0")
     StudentDO queryStudentBySno(String sno);
